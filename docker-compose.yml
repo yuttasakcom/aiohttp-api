@@ -1,8 +1,11 @@
 version: "3"
 
 services:
-  python:
+  app:
     build: .
+    container_name: app
+    volumes:
+      - ./src:/usr/src
     ports:
       - "3000:80"
     restart: always

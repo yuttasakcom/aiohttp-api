@@ -7,8 +7,8 @@ WORKDIR /usr/src
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY src/ .
 
 EXPOSE 80
 
-CMD [ "python", "./src/server.py" ]
+CMD [ "python", "/usr/src/server.py" ]
